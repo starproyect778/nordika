@@ -1,0 +1,901 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(198, 209, 238);
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.section-work {
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    margin-bottom: 0 !important;
+}
+
+/* Forzar que la página inicie en el header */
+html, body {
+    scroll-padding-top: 0;
+    scroll-margin-top: 0;
+}
+
+.gallery_img {
+    width: 150px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+header {
+    background-color: #74bfe2;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 100px;
+    margin-bottom: 20px;
+}
+
+
+/* Header fijo y botón volver (específico para no ser afectado por header global) */
+header.site-header{
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1001;
+    padding: 0;
+    background: transparent;
+}
+
+header.site-header .btn-back{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #0a66c2;
+    color: #ffffff;
+    padding: 8px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: transform .15s ease, opacity .15s ease;
+}
+
+header.site-header .btn-back:hover{
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 480px){
+    header.site-header { top: 8px; left: 8px; }
+    header.site-header .btn-back { padding: 6px 10px; font-size: 14px; }
+}
+
+/* Header fijo y botón volver (específico para no ser afectado por header global) */
+header.site-header{
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1001;
+    padding: 0;
+    background: transparent;
+}
+
+header.site-header .btn-back{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0a66c2;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: transform .15s ease, opacity .15s ease;
+}
+
+header.site-header .btn-back:hover{
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 480px){
+    header.site-header { top: 8px; left: 8px; }
+    header.site-header .btn-back { padding: 6px 10px; font-size: 14px; }
+}
+/* Hero mínimo */
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 { font-size: 3rem; color: #fff; margin: 0 0 8px; font-weight: 800; }
+.hero-text h2 { font-size: 1.4rem; color: rgba(255,255,255,.9); margin: 0 0 16px; font-weight: 300; }
+.hero-text p  { font-size: 1rem; color: rgba(255,255,255,.85); margin: 0 0 20px; line-height: 1.6; }
+
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary, .btn-secondary {
+    display: inline-block; 
+    padding: 12px 22px; 
+    border-radius: 999px;
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.btn-primary { 
+    background: #fff; 
+    color: #667eea; 
+    border-color: #fff;
+}
+.btn-primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+.btn-secondary { 
+    border: 2px solid #fff; 
+    color: #fff; 
+    background: transparent;
+}
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.hero-image { position: relative; }
+.hero-img {
+    width: 100%; height: 420px; object-fit: cover; border-radius: 16px;
+}
+
+/* Carrusel dentro del hero */
+.hero-image .carrusel {
+    width: 100%;
+    height: 420px;
+    max-width: none;
+}
+
+.hero-image .slide {
+    height: 420px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(45deg, rgba(102,126,234,.6), rgba(118,75,162,.6));
+}
+
+
+.contenido-principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Secciones de viajes en páginas de países */
+.Viajes-suecia,
+.Viajes-Dinamarca,
+.Viajes-Noruega,
+.Viajes-Finlandia,
+.Viajes-Islandia,
+.Viajes-Tour {
+    margin-bottom: 30px;
+}
+
+.Viajes {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+}
+
+.Viajes:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.viaje-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.info-pais {
+    max-width: 300px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.info-pais h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.info-pais p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.fondo-personalizado {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100px;
+    margin-top: 20px;
+}
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slide.activo {
+    opacity: 1;
+}
+
+/* Botones del carrusel */
+.carrusel-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carrusel-buttons:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carrusel-prev {
+    left: 20px;
+}
+
+.carrusel-next {
+    right: 20px;
+}
+
+/* Indicadores del carrusel */
+.carrusel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.activo {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.2);
+}
+
+/* Estilos para el footer y redes sociales */
+.footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.footer h4 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.red-social {
+    display: inline-block;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+.red-social i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.red-social:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección de reseñas */
+.reseñas-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 20px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.reseñas-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+}
+
+.container-reseñas {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container-reseñas h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    font-weight: 700;
+    position: relative;
+}
+
+.container-reseñas h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Grid de reseñas */
+.reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.reseña-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #667eea;
+    position: relative;
+}
+
+.reseña-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.estrellas {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffd700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.reseña-card p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.reseña-card p::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 3rem;
+    color: #667eea;
+    opacity: 0.3;
+    font-family: serif;
+}
+
+.reseña-card p::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: 3rem;
+    color: #667eea;
+    opacity: 0.3;
+    font-family: serif;
+}
+
+.autor-reseña {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    margin-top: 20px;
+}
+
+.autor-reseña strong {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.autor-reseña span {
+    color: #667eea;
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Estilos para información adicional */
+.info-adicional {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 20px;
+    margin: 80px 0 40px 0;
+    clear: both;
+}
+
+.container-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-info h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+    row-gap: 50px;
+}
+
+.beneficio {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 180px;
+    text-align: center;
+    border-top: 4px solid #667eea;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.beneficio p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Estilos para sección de reserva */
+#reservar {
+    margin-bottom: 80px !important;
+    padding: 60px 20px !important;
+}
+
+/* Estilos para caja de precio */
+.precio-box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 15px;
+    color: white;
+    min-height: 160px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.precio-box p {
+    margin: 5px 0 !important;
+}
+
+/* Estilos para precios */
+.precio {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Estilos para headers hero de destinos */
+.hero-section-destino {
+    position: relative;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hero-content-destino {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-destino h1 { 
+    font-size: 3.5rem; 
+    color: #fff; 
+    margin: 0 0 8px; 
+    font-weight: 800; 
+}
+
+.hero-text-destino h2 { 
+    font-size: 1.6rem; 
+    color: rgba(255,255,255,.9); 
+    margin: 0 0 16px; 
+    font-weight: 300; 
+}
+
+.hero-text-destino p { 
+    font-size: 1.1rem; 
+    color: rgba(255,255,255,.85); 
+    margin: 0 0 20px; 
+    line-height: 1.6; 
+}
+
+.hero-buttons-destino { 
+    display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+}
+
+.btn-primary-destino, .btn-secondary-destino {
+    display: inline-block; 
+    padding: 12px 22px; 
+    border-radius: 999px;
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-destino { 
+    background: #fff; 
+    color: #667eea; 
+}
+
+.btn-primary-destino:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.btn-secondary-destino { 
+    border: 2px solid #fff; 
+    color: #fff; 
+}
+
+.btn-secondary-destino:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Botón de finalizar reserva */
+.btn-finalizar {
+    display: inline-block;
+    padding: 18px 45px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 60px;
+    min-width: 250px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.btn-finalizar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.hero-image-destino { 
+    position: relative; 
+}
+
+.hero-img-destino {
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hero-overlay-destino {
+    position: absolute; 
+    inset: 0;
+    background: linear-gradient(45deg, rgba(102,126,234,.4), rgba(118,75,162,.4));
+}
+
+/* Responsive para headers de destinos */
+@media (max-width: 768px) {
+    .hero-content-destino {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-text-destino h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text-destino h2 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-img-destino {
+        height: 300px;
+    }
+}
+
+/* Responsive para grid de reseñas */
+@media (max-width: 768px) {
+    .reseñas-section {
+        padding: 60px 15px;
+    }
+    
+    .container-reseñas h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    
+    .reseñas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .reseña-card {
+        padding: 25px;
+    }
+    
+    .reseña-card p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .reseña-card p::before,
+    .reseña-card p::after {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .reseñas-section {
+        padding: 40px 10px;
+    }
+    
+    .container-reseñas h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .reseñas-grid {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .reseña-card {
+        padding: 20px;
+    }
+    
+    .reseña-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+    
+    .reseña-card p::before,
+    .reseña-card p::after {
+        font-size: 2rem;
+    }
+    
+    .autor-reseña strong {
+        font-size: 1.1rem;
+    }
+    
+    .autor-reseña span {
+        font-size: 0.9rem;
+    }
+}
+
+/* Botón flotante para volver arriba - Solo CSS */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #5a6fd8, #6a4190);
+    opacity: 1;
+    color: white;
+    text-decoration: none;
+}
+
+.scroll-to-top:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive para botón flotante */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+} 
