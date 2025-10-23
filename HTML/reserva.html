@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../CSS/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Reserva - Nordika</title>
+    <meta name="description" content="Completa tu reserva de viaje a los países nórdicos. Formulario seguro y profesional.">
+    <link rel="icon" type="image/png" href="../Imágenes/Nordika_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación Principal -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-logo">
+                <i class="fas fa-snowflake"></i> Nordika
+            </a>
+            <button class="navbar-toggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="../index.html" class="navbar-link">← Volver al Inicio</a></li>
+                <li class="navbar-item"><a href="../index.html#Destinos" class="navbar-link">Destinos</a></li>
+                <li class="navbar-item"><a href="#redes" class="navbar-btn">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section-destino">
+        <div class="hero-content-destino">
+            <div class="hero-text-destino">
+                <h1>🎉 Finalizar Reserva</h1>
+                <h2>¡Estás a un paso de vivir una aventura nórdica!</h2>
+                <p>Completa tus datos y confirma tu viaje. Te contactaremos en menos de 24 horas para confirmar todos los detalles de tu reserva.</p>
+            </div>
+            <div class="hero-image-destino">
+                <img src="../Imágenes/paquete.jpg" alt="Reserva tu viaje" class="hero-img-destino">
+            </div>
+        </div>
+        <div class="hero-overlay-destino"></div>
+    </section>
+
+    <!-- Formulario de Reserva -->
+    <section style="background: var(--color-light); padding: 60px 20px;">
+        <div class="container">
+            <!-- Mensaje de Éxito (inicialmente oculto) -->
+            <div id="mensajeExito" class="mensaje-exito">
+                <h3>✅ ¡Reserva Recibida con Éxito!</h3>
+                <p>Hemos recibido tu solicitud de reserva. Te contactaremos en las próximas 24 horas para confirmar todos los detalles de tu viaje.</p>
+                <p style="margin-top: 15px;"><strong>Número de Referencia:</strong> <span id="numReferencia"></span></p>
+            </div>
+
+            <!-- Información Importante -->
+            <div class="info-importante">
+                <p><strong>📌 Importante:</strong> Esta es una solicitud de reserva. Un agente de Nordika te contactará para confirmar disponibilidad y finalizar el pago.</p>
+            </div>
+
+            <!-- Resumen de Reserva -->
+            <div class="resumen-reserva">
+                <h3>📋 Resumen de tu Reserva</h3>
+                <div class="resumen-item">
+                    <span>Destino:</span>
+                    <strong id="resumenDestino">Viaje Nórdico</strong>
+                </div>
+                <div class="resumen-item">
+                    <span>Número de Viajeros:</span>
+                    <strong id="resumenViajeros">-</strong>
+                </div>
+                <div class="resumen-item">
+                    <span>Fecha de Viaje:</span>
+                    <strong id="resumenFecha">-</strong>
+                </div>
+                <div class="resumen-item">
+                    <span>Precio Estimado:</span>
+                    <strong id="resumenPrecio">A confirmar</strong>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <form id="formularioReserva" class="formulario-reserva">
+                <h2 style="text-align: center; color: var(--color-primary); margin-bottom: 40px;">
+                    📝 Datos del Titular de la Reserva
+                </h2>
+
+                <!-- Datos Personales -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: Juan Pérez García" required>
+                        <span class="form-error">Por favor, ingresa tu nombre completo</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="documento">Documento de Identidad <span class="required">*</span></label>
+                        <input type="text" id="documento" name="documento" class="form-control" placeholder="DNI/Pasaporte" required>
+                        <span class="form-error">Por favor, ingresa tu documento</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com" required>
+                        <span class="form-error">Por favor, ingresa un email válido</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono <span class="required">*</span></label>
+                        <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+34 600 000 000" required>
+                        <span class="form-error">Por favor, ingresa tu teléfono</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad de Residencia <span class="required">*</span></label>
+                        <input type="text" id="ciudad" name="ciudad" class="form-control" placeholder="Ej: Madrid" required>
+                        <span class="form-error">Por favor, ingresa tu ciudad</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pais">País <span class="required">*</span></label>
+                        <select id="pais" name="pais" class="form-control" required>
+                            <option value="">Selecciona tu país</option>
+                            <option value="España">España</option>
+                            <option value="México">México</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Perú">Perú</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <span class="form-error">Por favor, selecciona tu país</span>
+                    </div>
+                </div>
+
+                <!-- Detalles del Viaje -->
+                <h3 style="color: var(--color-primary); margin: 40px 0 20px; text-align: center;">
+                    ✈️ Detalles del Viaje
+                </h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="destino">Destino Deseado <span class="required">*</span></label>
+                        <select id="destino" name="destino" class="form-control" required>
+                            <option value="">Selecciona un destino</option>
+                            <option value="Suecia">Suecia</option>
+                            <option value="Dinamarca">Dinamarca</option>
+                            <option value="Noruega">Noruega</option>
+                            <option value="Finlandia">Finlandia</option>
+                            <option value="Islandia">Islandia</option>
+                            <option value="Tour Completo">Tour Escandinavia Completo</option>
+                        </select>
+                        <span class="form-error">Por favor, selecciona un destino</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numViajeros">Número de Viajeros <span class="required">*</span></label>
+                        <select id="numViajeros" name="numViajeros" class="form-control" required>
+                            <option value="">Selecciona</option>
+                            <option value="1">1 Viajero</option>
+                            <option value="2">2 Viajeros</option>
+                            <option value="3">3 Viajeros</option>
+                            <option value="4">4 Viajeros</option>
+                            <option value="5">5 Viajeros</option>
+                            <option value="6+">6 o más</option>
+                        </select>
+                        <span class="form-error">Por favor, selecciona el número de viajeros</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fechaSalida">Fecha de Salida Preferida <span class="required">*</span></label>
+                        <input type="date" id="fechaSalida" name="fechaSalida" class="form-control" required>
+                        <span class="form-error">Por favor, selecciona una fecha</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duracion">Duración del Viaje <span class="required">*</span></label>
+                        <select id="duracion" name="duracion" class="form-control" required>
+                            <option value="">Selecciona</option>
+                            <option value="3-5 días">3-5 días</option>
+                            <option value="6-8 días">6-8 días</option>
+                            <option value="9-12 días">9-12 días</option>
+                            <option value="13-15 días">13-15 días</option>
+                            <option value="16+ días">Más de 16 días</option>
+                        </select>
+                        <span class="form-error">Por favor, selecciona la duración</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="presupuesto">Presupuesto Aproximado por Persona</label>
+                    <select id="presupuesto" name="presupuesto" class="form-control">
+                        <option value="">Selecciona un rango (opcional)</option>
+                        <option value="500-1000">€500 - €1,000</option>
+                        <option value="1000-2000">€1,000 - €2,000</option>
+                        <option value="2000-3000">€2,000 - €3,000</option>
+                        <option value="3000+">Más de €3,000</option>
+                    </select>
+                </div>
+
+                <!-- Preferencias y Comentarios -->
+                <div class="form-group">
+                    <label for="comentarios">Comentarios o Solicitudes Especiales</label>
+                    <textarea id="comentarios" name="comentarios" class="form-control" placeholder="Cuéntanos sobre tus preferencias, necesidades especiales, intereses específicos, etc."></textarea>
+                </div>
+
+                <!-- Servicios Adicionales -->
+                <div class="form-group">
+                    <label style="display: block; margin-bottom: 15px;">Servicios Adicionales de Interés:</label>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="seguro" name="servicios[]" value="Seguro de viaje">
+                        <label for="seguro">Seguro de viaje completo</label>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="guia" name="servicios[]" value="Guía en español">
+                        <label for="guia">Guía turístico en español</label>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="traslados" name="servicios[]" value="Traslados aeropuerto">
+                        <label for="traslados">Traslados aeropuerto-hotel</label>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="excursiones" name="servicios[]" value="Excursiones opcionales">
+                        <label for="excursiones">Excursiones opcionales</label>
+                    </div>
+                </div>
+
+                <!-- Términos y Condiciones -->
+                <div class="form-checkbox">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">
+                        He leído y acepto los <a href="#" style="color: var(--color-primary); text-decoration: underline;">términos y condiciones</a> y la <a href="#" style="color: var(--color-primary); text-decoration: underline;">política de privacidad</a> <span class="required">*</span>
+                    </label>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">
+                        Deseo recibir ofertas y novedades de Nordika por email
+                    </label>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane"></i> Enviar Solicitud de Reserva
+                </button>
+
+                <p style="text-align: center; color: var(--color-text-light); margin-top: 20px; font-size: 0.9rem;">
+                    🔒 Tus datos están protegidos y solo se usarán para gestionar tu reserva
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="redes">
+        <div class="container">
+            <h4>✉️ CONTÁCTANOS</h4>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 30px;">
+                Síguenos en redes sociales y mantente informado sobre nuestras ofertas exclusivas
+            </p>
+            <div class="redes">
+                <span class="red-social" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </span>
+                <span class="red-social" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </span>
+                <span class="red-social" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </span>
+                <span class="red-social" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </span>
+                <span class="red-social" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </span>
+            </div>
+            <p style="color: rgba(255,255,255,0.7); margin-top: 40px; font-size: 0.95rem;">
+                © 2025 Nordika - Agencia de Viajes Nórdicos. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante para volver arriba -->
+    <a href="#" class="scroll-to-top" aria-label="Volver arriba">↑</a>
+
+    <!-- Script -->
+    <script>
+        // Menú responsive
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.navbar-link, .navbar-btn').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.navbar-menu').classList.remove('active');
+            });
+        });
+
+        // Actualizar resumen en tiempo real
+        document.getElementById('destino').addEventListener('change', function() {
+            document.getElementById('resumenDestino').textContent = this.value || 'Viaje Nórdico';
+        });
+
+        document.getElementById('numViajeros').addEventListener('change', function() {
+            document.getElementById('resumenViajeros').textContent = this.value || '-';
+        });
+
+        document.getElementById('fechaSalida').addEventListener('change', function() {
+            if(this.value) {
+                const fecha = new Date(this.value);
+                document.getElementById('resumenFecha').textContent = fecha.toLocaleDateString('es-ES', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            }
+        });
+
+        // Validación y envío del formulario
+        document.getElementById('formularioReserva').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validación básica
+            let esValido = true;
+            const campos = this.querySelectorAll('[required]');
+            
+            campos.forEach(campo => {
+                if (!campo.value) {
+                    campo.classList.add('error');
+                    esValido = false;
+                } else {
+                    campo.classList.remove('error');
+                }
+            });
+
+            // Validar email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.classList.add('error');
+                esValido = false;
+            }
+
+            if (esValido) {
+                // Generar número de referencia
+                const numRef = 'NRD' + Date.now().toString().slice(-8);
+                document.getElementById('numReferencia').textContent = numRef;
+                
+                // Mostrar mensaje de éxito
+                document.getElementById('mensajeExito').classList.add('show');
+                
+                // Scroll al mensaje
+                document.getElementById('mensajeExito').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                
+                // Resetear formulario
+                this.reset();
+                
+                // Opcional: Aquí podrías enviar los datos a un servidor
+                console.log('Reserva enviada exitosamente');
+                
+                // Ocultar el mensaje después de 10 segundos
+                setTimeout(() => {
+                    document.getElementById('mensajeExito').classList.remove('show');
+                }, 10000);
+            } else {
+                alert('Por favor, completa todos los campos obligatorios correctamente.');
+            }
+        });
+
+        // Establecer fecha mínima (hoy)
+        const hoy = new Date().toISOString().split('T')[0];
+        document.getElementById('fechaSalida').setAttribute('min', hoy);
+    </script>
+
+</body>
+</html>
+

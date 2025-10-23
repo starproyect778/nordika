@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../CSS/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva tu viaje a los países nórdicos con Nordika. Completa el formulario y te contactaremos a la brevedad.">
+    <title>Reservar Viaje - Nordika</title>
+    <link rel="icon" type="image/png" href="../Imágenes/Nordika_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-logo">
+                <i class="fas fa-snowflake"></i> Nordika
+            </a>
+            <button class="navbar-toggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="../index.html#Destinos" class="navbar-link">Destinos</a></li>
+                <li class="navbar-item"><a href="../index.html#reseñas" class="navbar-link">Reseñas</a></li>
+                <li class="navbar-item"><a href="tour-escandinavia.html" class="navbar-link">Tours</a></li>
+                <li class="navbar-item"><a href="nosotros.html" class="navbar-link">Nosotros</a></li>
+                <li class="navbar-item"><a href="contacto.html" class="navbar-link">Contacto</a></li>
+                <li class="navbar-item"><a href="reservar.html" class="navbar-btn">Reservar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: url('../Imágenes/fondo.jpg'); background-size: cover; background-position: center; min-height: 400px; position: relative;">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>✈️ Reserva tu Viaje Nórdico</h1>
+                <h2>Completa tus datos y te contactaremos</h2>
+                <p>Nuestro equipo revisará tu solicitud y te enviará una propuesta personalizada en menos de 24 horas.</p>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Formulario de Reserva -->
+    <section class="seccion-reserva" style="padding: 4rem 2rem;">
+        <div class="reserva-container" style="max-width: 900px;">
+            <h2>📋 Formulario de Reserva</h2>
+            <p style="margin-bottom: 2rem;">Completa la información y nos pondremos en contacto contigo</p>
+
+            <form id="formReserva" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                
+                <!-- Datos Personales -->
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem;">
+                        <i class="fas fa-user"></i> Datos Personales
+                    </h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Nombre Completo <span style="color: red;">*</span>
+                            </label>
+                            <input type="text" name="nombre" required 
+                                   style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;"
+                                   onfocus="this.style.borderColor='var(--color-primary)'" 
+                                   onblur="this.style.borderColor='var(--color-border)'"
+                                   placeholder="Ej: Juan Pérez">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Email <span style="color: red;">*</span>
+                            </label>
+                            <input type="email" name="email" required 
+                                   style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;"
+                                   onfocus="this.style.borderColor='var(--color-primary)'" 
+                                   onblur="this.style.borderColor='var(--color-border)'"
+                                   placeholder="tu@email.com">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Teléfono <span style="color: red;">*</span>
+                            </label>
+                            <input type="tel" name="telefono" required 
+                                   style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;"
+                                   onfocus="this.style.borderColor='var(--color-primary)'" 
+                                   onblur="this.style.borderColor='var(--color-border)'"
+                                   placeholder="+34 600 00 00 00">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                País de Residencia <span style="color: red;">*</span>
+                            </label>
+                            <input type="text" name="pais" required 
+                                   style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;"
+                                   onfocus="this.style.borderColor='var(--color-primary)'" 
+                                   onblur="this.style.borderColor='var(--color-border)'"
+                                   placeholder="Ej: España">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detalles del Viaje -->
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem;">
+                        <i class="fas fa-plane"></i> Detalles del Viaje
+                    </h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Destino(s) de Interés <span style="color: red;">*</span>
+                            </label>
+                            <select name="destino" required 
+                                    style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; background: white;"
+                                    onfocus="this.style.borderColor='var(--color-primary)'" 
+                                    onblur="this.style.borderColor='var(--color-border)'">
+                                <option value="">Selecciona un destino</option>
+                                <optgroup label="Suecia">
+                                    <option value="Estocolmo">Estocolmo</option>
+                                    <option value="Gotemburgo">Gotemburgo</option>
+                                    <option value="Malmö">Malmö</option>
+                                    <option value="Kiruna">Kiruna</option>
+                                    <option value="Visby">Visby</option>
+                                </optgroup>
+                                <optgroup label="Dinamarca">
+                                    <option value="Copenhague">Copenhague</option>
+                                    <option value="Aarhus">Aarhus</option>
+                                    <option value="Odense">Odense</option>
+                                    <option value="Kronborg">Castillo de Kronborg</option>
+                                    <option value="Legoland">Legoland Billund</option>
+                                </optgroup>
+                                <optgroup label="Noruega">
+                                    <option value="Oslo">Oslo</option>
+                                    <option value="Bergen">Bergen</option>
+                                    <option value="Geiranger">Fiordo de Geiranger</option>
+                                    <option value="Tromsø">Tromsø</option>
+                                    <option value="Trondheim">Trondheim</option>
+                                </optgroup>
+                                <optgroup label="Finlandia">
+                                    <option value="Helsinki">Helsinki</option>
+                                    <option value="Rovaniemi">Rovaniemi</option>
+                                    <option value="Turku">Turku</option>
+                                    <option value="Tampere">Tampere</option>
+                                    <option value="Åland">Archipiélago de Åland</option>
+                                </optgroup>
+                                <optgroup label="Islandia">
+                                    <option value="Reykjavik">Reykjavik</option>
+                                    <option value="Círculo Dorado">Círculo Dorado</option>
+                                    <option value="Costa Sur">Costa Sur</option>
+                                    <option value="Blue Lagoon">Blue Lagoon</option>
+                                </optgroup>
+                                <optgroup label="Tours">
+                                    <option value="Tour Escandinavia">Tour Completo Escandinavia</option>
+                                    <option value="Personalizado">Viaje Personalizado</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Número de Viajeros <span style="color: red;">*</span>
+                            </label>
+                            <input type="number" name="viajeros" required min="1" max="20" 
+                                   style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;"
+                                   onfocus="this.style.borderColor='var(--color-primary)'" 
+                                   onblur="this.style.borderColor='var(--color-border)'"
+                                   placeholder="Ej: 2">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Fecha Aproximada de Salida <span style="color: red;">*</span>
+                            </label>
+                            <input type="date" name="fecha" required 
+                                   style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;"
+                                   onfocus="this.style.borderColor='var(--color-primary)'" 
+                                   onblur="this.style.borderColor='var(--color-border)'">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Duración Estimada (días)
+                            </label>
+                            <input type="number" name="duracion" min="1" max="30" 
+                                   style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;"
+                                   onfocus="this.style.borderColor='var(--color-primary)'" 
+                                   onblur="this.style.borderColor='var(--color-border)'"
+                                   placeholder="Ej: 7">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presupuesto y Preferencias -->
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem; font-size: 1.3rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem;">
+                        <i class="fas fa-euro-sign"></i> Presupuesto y Preferencias
+                    </h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Presupuesto Aproximado por Persona
+                            </label>
+                            <select name="presupuesto" 
+                                    style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; background: white;"
+                                    onfocus="this.style.borderColor='var(--color-primary)'" 
+                                    onblur="this.style.borderColor='var(--color-border)'">
+                                <option value="">Selecciona un rango</option>
+                                <option value="500-1000">€500 - €1,000</option>
+                                <option value="1000-1500">€1,000 - €1,500</option>
+                                <option value="1500-2000">€1,500 - €2,000</option>
+                                <option value="2000+">Más de €2,000</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                                Tipo de Alojamiento Preferido
+                            </label>
+                            <select name="alojamiento" 
+                                    style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; transition: border-color 0.3s; background: white;"
+                                    onfocus="this.style.borderColor='var(--color-primary)'" 
+                                    onblur="this.style.borderColor='var(--color-border)'">
+                                <option value="">Selecciona una opción</option>
+                                <option value="3estrellas">Hotel 3 estrellas</option>
+                                <option value="4estrellas">Hotel 4 estrellas</option>
+                                <option value="5estrellas">Hotel 5 estrellas / Lujo</option>
+                                <option value="boutique">Hotel Boutique</option>
+                                <option value="airbnb">Apartamento / Airbnb</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-dark);">
+                            Comentarios Adicionales o Preferencias Especiales
+                        </label>
+                        <textarea name="comentarios" rows="5" 
+                                  style="width: 100%; padding: 12px; border: 2px solid var(--color-border); border-radius: 8px; font-size: 1rem; resize: vertical; transition: border-color 0.3s; font-family: inherit;"
+                                  onfocus="this.style.borderColor='var(--color-primary)'" 
+                                  onblur="this.style.borderColor='var(--color-border)'"
+                                  placeholder="Cuéntanos sobre tus intereses, actividades que te gustaría hacer, necesidades especiales, etc."></textarea>
+                    </div>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn-finalizar" style="max-width: 400px; margin: 0 auto; font-size: 1.2rem; padding: 1rem 2rem;">
+                        ✈️ Enviar Solicitud de Reserva
+                    </button>
+                    <p style="margin-top: 1rem; color: var(--color-text-light); font-size: 0.9rem;">
+                        <i class="fas fa-clock"></i> Responderemos en menos de 24 horas
+                    </p>
+                </div>
+            </form>
+
+            <!-- Mensaje de Confirmación (oculto inicialmente) -->
+            <div id="mensajeExito" style="display: none; background: linear-gradient(135deg, #4caf50 0%, #45a049 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center; margin-top: 2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+                <i class="fas fa-check-circle" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 1rem; color: white;">¡Solicitud Enviada con Éxito!</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 0;">Gracias por tu interés. Nos pondremos en contacto contigo en las próximas 24 horas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Adicional -->
+    <section class="info-adicional">
+        <div class="container-info">
+            <h2>❓ ¿Tienes Preguntas?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio">
+                    <h3>📞 Atención Telefónica</h3>
+                    <p>Llámanos al +34 600 00 00 00 de lunes a viernes de 9:00 a 20:00</p>
+                </div>
+                <div class="beneficio">
+                    <h3>💬 WhatsApp</h3>
+                    <p>Chatea con nosotros directamente. Respuesta inmediata en horario laboral.</p>
+                </div>
+                <div class="beneficio">
+                    <h3>📧 Email</h3>
+                    <p>Escríbenos a info@nordika.com y te responderemos en 24 horas.</p>
+                </div>
+                <div class="beneficio">
+                    <h3>🔒 Datos Seguros</h3>
+                    <p>Tu información está protegida y solo será utilizada para gestionar tu reserva.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="redes">
+        <div class="container">
+            <h4>✉️ CONTÁCTANOS</h4>
+            <!-- Contacto Directo -->
+            <div class="redes" style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2rem;">
+                <span class="red-social" aria-label="WhatsApp" style="background: #25D366; border: none;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </span>
+                <span class="red-social" aria-label="Gmail" style="background: #EA4335; border: none;">
+                    <i class="fas fa-envelope"></i> Gmail
+                </span>
+                <span class="red-social" aria-label="Teléfono" style="background: #2c5f8d; border: none;">
+                    <i class="fas fa-phone"></i> Teléfono
+                </span>
+            </div>
+            <h4 style="font-size: 1rem;">SÍGUENOS EN REDES SOCIALES</h4>
+            <div class="redes">
+                <a href="#" class="red-social" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="red-social" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" class="red-social" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="red-social" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="#" class="red-social" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">© 2025 Nordika - Agencia de Viajes Nórdicos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Menú responsive
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.navbar-link, .navbar-btn').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+            });
+        });
+
+        // Manejar envío del formulario
+        document.getElementById('formReserva').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener datos del formulario
+            const formData = new FormData(this);
+            const datos = {};
+            formData.forEach((value, key) => {
+                datos[key] = value;
+            });
+            
+            // Aquí puedes enviar los datos a un servidor
+            // Por ahora, solo mostramos el mensaje de éxito
+            console.log('Datos de reserva:', datos);
+            
+            // Ocultar formulario y mostrar mensaje de éxito
+            this.style.display = 'none';
+            document.getElementById('mensajeExito').style.display = 'block';
+            
+            // Scroll al mensaje
+            document.getElementById('mensajeExito').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        // Establecer fecha mínima como hoy
+        const fechaInput = document.querySelector('input[name="fecha"]');
+        if (fechaInput) {
+            const hoy = new Date().toISOString().split('T')[0];
+            fechaInput.setAttribute('min', hoy);
+        }
+    </script>
+</body>
+</html>
+
