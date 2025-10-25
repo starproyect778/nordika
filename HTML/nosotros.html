@@ -452,12 +452,99 @@
             transform: translateY(-3px) scale(1.05);
         }
 
-        /* Responsive improvements */
+        /* ===== RESPONSIVE DESIGN ===== */
+        
+        /* Contenedor principal con buen padding */
+        .nosotros-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-xxl) var(--spacing-lg);
+        }
+        
+        /* Grid de ubicación responsive */
+        .ubicacion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        /* Mejorar áreas táctiles en móviles */
+        @media (hover: none) and (pointer: coarse) {
+            .btn-cta-primary,
+            .btn-cta-secondary,
+            .navbar-btn,
+            .navbar-link {
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        /* Tablets y pantallas medianas (1024px - 768px) */
+        @media (max-width: 1024px) {
+            .nosotros-container {
+                padding: var(--spacing-xl) var(--spacing-md);
+            }
+            
+            .info-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: var(--spacing-lg);
+            }
+            
+            .valores-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: var(--spacing-md);
+            }
+            
+            .ubicacion-grid {
+                gap: var(--spacing-lg);
+            }
+        }
+
+        /* Tablets pequeñas y móviles grandes (768px - 480px) */
         @media (max-width: 768px) {
+            .nosotros-container {
+                padding: var(--spacing-lg) var(--spacing-md);
+            }
+            
             .info-grid,
             .valores-grid,
-            .como-llegar-grid {
+            .como-llegar-grid,
+            .ubicacion-grid {
                 grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .info-card,
+            .valor-item {
+                padding: var(--spacing-lg);
+            }
+            
+            .info-card-icon,
+            .valor-item-icon {
+                font-size: 2.5rem;
+            }
+            
+            .valor-icon-plane {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem !important;
+            }
+
+            .ubicacion-card {
+                padding: var(--spacing-xl) var(--spacing-lg);
+            }
+            
+            .ubicacion-grid {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-lg);
+            }
+
+            .valores-container {
+                padding: var(--spacing-xl) var(--spacing-lg);
             }
 
             .valor-small {
@@ -467,6 +554,189 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
+                gap: var(--spacing-sm);
+            }
+            
+            .btn-cta-primary,
+            .btn-cta-secondary {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .horarios-container {
+                padding: var(--spacing-md);
+            }
+            
+            .horario-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--spacing-xs);
+                padding: var(--spacing-sm);
+            }
+            
+            .horario-item strong {
+                min-width: auto;
+            }
+            
+            .como-llegar-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            .como-llegar-item p {
+                font-size: 0.85rem !important;
+            }
+            
+            /* Ajustes específicos para hero responsive */
+            .nosotros-hero-content {
+                flex-direction: column;
+                text-align: center;
+                padding: var(--spacing-xl) var(--spacing-md);
+            }
+            
+            .nosotros-logo-container {
+                margin-top: var(--spacing-lg);
+            }
+            
+            /* Mejoras de legibilidad */
+            .nosotros-parrafo,
+            .ubicacion-texto,
+            .valor-item p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
+
+        /* Móviles pequeños (480px - 360px) */
+        @media (max-width: 480px) {
+            .nosotros-container {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+            
+            .info-card,
+            .valor-item,
+            .ubicacion-card {
+                padding: var(--spacing-md);
+                border-radius: 15px;
+            }
+            
+            .valores-container {
+                padding: var(--spacing-lg) var(--spacing-md);
+                border-radius: 15px;
+            }
+            
+            .cta-section {
+                padding: var(--spacing-xl) var(--spacing-md);
+                border-radius: 15px;
+            }
+            
+            .info-card-icon,
+            .valor-item-icon,
+            .valor-small-icon {
+                font-size: 2rem;
+            }
+            
+            .valor-icon-plane {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem !important;
+            }
+            
+            .info-card h3,
+            .valor-item h4 {
+                font-size: 1.2rem;
+            }
+            
+            .nosotros-titulo {
+                font-size: 1.8rem !important;
+            }
+            
+            .nosotros-subtitulo {
+                font-size: 1.5rem !important;
+            }
+            
+            .btn-cta-primary,
+            .btn-cta-secondary {
+                padding: 14px 30px;
+                font-size: 0.95rem;
+            }
+            
+            .como-llegar-icon {
+                font-size: 1.5rem;
+            }
+            
+            .ubicacion-card::after {
+                font-size: 120px;
+                right: -10px;
+                bottom: -20px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.3rem !important;
+            }
+            
+            .hero-text p {
+                font-size: 0.95rem !important;
+            }
+            
+            .nosotros-logo-grande {
+                max-width: 150px;
+            }
+            
+            .horario-item {
+                padding: var(--spacing-xs);
+            }
+        }
+        
+        /* Móviles muy pequeños (< 360px) */
+        @media (max-width: 360px) {
+            .nosotros-container {
+                padding: var(--spacing-sm);
+            }
+            
+            .info-card,
+            .valor-item,
+            .ubicacion-card,
+            .valores-container,
+            .cta-section {
+                padding: var(--spacing-sm);
+            }
+            
+            .info-card-icon,
+            .valor-item-icon {
+                font-size: 1.8rem;
+            }
+            
+            .valor-icon-plane {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem !important;
+            }
+            
+            .btn-cta-primary,
+            .btn-cta-secondary {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+            
+            .info-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .valor-item h4 {
+                font-size: 1rem;
+            }
+            
+            .nosotros-titulo {
+                font-size: 1.5rem !important;
+            }
+            
+            .nosotros-subtitulo {
+                font-size: 1.3rem !important;
             }
         }
 
