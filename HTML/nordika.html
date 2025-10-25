@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordika - Agencia de Viajes Nórdicos | Descubre Escandinavia</title>
+    <meta name="description" content="Explora los países nórdicos con Nordika: viajes a Suecia, Noruega, Dinamarca, Finlandia e Islandia. Aurora boreal, fiordos y cultura escandinava.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nordika.com/">
+    <meta property="og:title" content="Nordika - Viajes a Países Nórdicos">
+    <meta property="og:description" content="Descubre Suecia, Noruega, Dinamarca, Finlandia e Islandia. Auroras boreales, fiordos y cultura escandinava.">
+    <meta property="og:image" content="../Imágenes/IMAGEN1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.nordika.com/">
+    <meta property="twitter:title" content="Nordika - Viajes a Países Nórdicos">
+    <meta property="twitter:description" content="Descubre Suecia, Noruega, Dinamarca, Finlandia e Islandia">
+    <meta property="twitter:image" content="../Imágenes/IMAGEN1.jpg">
+    
+    <link rel="icon" type="image/png" href="../Imágenes/Nordika_logo.png">
+    <link rel="canonical" href="https://www.nordika.com/">
+    
+    <!-- Google Fonts: Solo Montserrat optimizado -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/estilo.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Nordika",
+        "description": "Agencia de viajes especializada en países nórdicos: Suecia, Noruega, Dinamarca, Finlandia e Islandia",
+        "url": "https://www.nordika.com",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "2500",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "areaServed": ["Sweden", "Norway", "Denmark", "Finland", "Iceland"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Barra de progreso de lectura -->
+    <div class="reading-progress-bar"></div>
+    
+    <!-- Skip to main content para accesibilidad -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+    
+    <!-- Navegación Principal -->
+    <header>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="nordika.html" class="navbar-logo">
+                <div class="logo-icon-wrapper">
+                    <i class="fas fa-plane-departure"></i>
+                </div>
+                <span class="logo-text">Nordika</span>
+            </a>
+            <button class="navbar-toggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="#Destinos" class="navbar-link">Destinos</a></li>
+                <li class="navbar-item"><a href="#reseñas" class="navbar-link">Reseñas</a></li>
+                <li class="navbar-item"><a href="tour-escandinavia.html" class="navbar-link">Tours</a></li>
+                <li class="navbar-item"><a href="nosotros.html" class="navbar-link">Nosotros</a></li>
+                <li class="navbar-item"><a href="reservar.html" class="navbar-btn">Reservar</a></li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Nordika</h1>
+            <h2>Agencia de Viajes Nórdicos</h2>
+            <p>Descubre la magia de los países nórdicos: Suecia, Dinamarca, Noruega, Finlandia e Islandia. Experiencias únicas en la tierra de la aurora boreal, los fiordos y la cultura escandinava.</p>
+            <div class="hero-buttons">
+                <a href="#Destinos" class="btn-primary">Explorar Destinos</a>
+                <a href="contacto.html" class="btn-secondary">Contáctanos</a>
+            </div>
+        </div>
+                
+                <!-- Carrusel en lugar de la imagen -->
+        <div class="hero-image">
+                    <div class="carrusel">
+                        <div class="slides">
+                            <div class="slide activo" data-pais="Suecia">
+                                <a href="suecia.html" title="Descubre Suecia">
+                                    <img src="../Imágenes/IMAGEN1.jpg" alt="Suecia" class="hero-img">
+                                    <div class="slide-label">
+                                        <span class="pais-icon">●</span>
+                                        <span class="pais-nombre">Suecia</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slide" data-pais="Dinamarca">
+                                <a href="dinamarca.html" title="Descubre Dinamarca">
+                                    <img src="../Imágenes/IMAGEN2.jpg" alt="Dinamarca" class="hero-img">
+                                    <div class="slide-label">
+                                        <span class="pais-icon">●</span>
+                                        <span class="pais-nombre">Dinamarca</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slide" data-pais="Noruega">
+                                <a href="noruega.html" title="Descubre Noruega">
+                                    <img src="../Imágenes/IMAGEN3.jpg" alt="Noruega" class="hero-img">
+                                    <div class="slide-label">
+                                        <span class="pais-icon">●</span>
+                                        <span class="pais-nombre">Noruega</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slide" data-pais="Finlandia">
+                                <a href="finlandia.html" title="Descubre Finlandia">
+                                    <img src="../Imágenes/IMAGEN4.jpg" alt="Finlandia" class="hero-img">
+                                    <div class="slide-label">
+                                        <span class="pais-icon">●</span>
+                                        <span class="pais-nombre">Finlandia</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slide" data-pais="Islandia">
+                                <a href="islandia.html" title="Descubre Islandia">
+                                    <img src="../Imágenes/IMAGEN5.jpg" alt="Islandia" class="hero-img">
+                                    <div class="slide-label">
+                                        <span class="pais-icon">●</span>
+                                        <span class="pais-nombre">Islandia</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Flechas de navegación -->
+                        <button class="flecha flecha-izquierda" aria-label="Imagen anterior del carrusel" type="button">
+                            ❮
+                        </button>
+                        <button class="flecha flecha-derecha" aria-label="Siguiente imagen del carrusel" type="button">
+                            ❯
+                        </button>
+                        
+                        <!-- Indicadores de país -->
+                        <div class="carrusel-indicadores" role="tablist" aria-label="Selector de países">
+                            <button class="indicador activo" role="tab" aria-label="Ver Suecia" aria-selected="true" data-slide="0"></button>
+                            <button class="indicador" role="tab" aria-label="Ver Dinamarca" aria-selected="false" data-slide="1"></button>
+                            <button class="indicador" role="tab" aria-label="Ver Noruega" aria-selected="false" data-slide="2"></button>
+                            <button class="indicador" role="tab" aria-label="Ver Finlandia" aria-selected="false" data-slide="3"></button>
+                            <button class="indicador" role="tab" aria-label="Ver Islandia" aria-selected="false" data-slide="4"></button>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+</section>
+
+        
+        <!-- Header de Destinos -->
+        <div class="destinos-header">
+            <h2 class="destinos-titulo">Nuestros Destinos Nórdicos</h2>
+            <p class="destinos-subtitulo">Explora los países más fascinantes del norte de Europa</p>
+        </div>
+
+        <!-- Sección de Destinos -->
+        <section id="Destinos" class="contenido-principal">
+            <section class="Viajes-suecia">
+                <div class="Viajes">
+                    <a href="suecia.html" class="viaje-item">
+                        <img alt="Paisaje de Estocolmo con edificios coloridos junto al agua en Suecia" class="gallery_img" src="../Imágenes/IMAGEN1.jpg" loading="lazy" decoding="async">
+                        <div class="info-pais">
+                            <h3>Viajes a Suecia</h3>
+                            <p>Descubre los paisajes nórdicos, la cultura sueca y sus ciudades modernas como Estocolmo.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="Viajes-Dinamarca">
+                <div class="Viajes">
+                    <a href="dinamarca.html" class="viaje-item">
+                        <img alt="Vista panorámica de Copenhague con el puerto colorido de Nyhavn en Dinamarca" class="gallery_img" src="../Imágenes/IMAGEN2.jpg" loading="lazy" decoding="async">
+                        <div class="info-pais">
+                            <h3>Viajes a Dinamarca</h3>
+                            <p>Explora la cultura danesa, Copenhague y los hermosos paisajes de Dinamarca.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="Viajes-Noruega">
+                <div class="Viajes">
+                    <a href="noruega.html" class="viaje-item">
+                        <img alt="Majestuosos fiordos noruegos con montañas nevadas y aguas cristalinas en Noruega" class="gallery_img" src="../Imágenes/IMAGEN3.jpg" loading="lazy" decoding="async">
+                        <div class="info-pais">
+                            <h3>Viajes a Noruega</h3>
+                            <p>Disfruta de los fiordos noruegos, la aurora boreal y la naturaleza única de Noruega.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="Viajes-Finlandia">
+                <div class="Viajes">
+                    <a href="finlandia.html" class="viaje-item">
+                        <img alt="Hermoso paisaje de lagos y bosques en la tierra de los mil lagos en Finlandia" class="gallery_img" src="../Imágenes/IMAGEN4.jpg" loading="lazy" decoding="async">
+                        <div class="info-pais">
+                            <h3>Viajes a Finlandia</h3>
+                            <p>Descubre la tierra de los mil lagos, Helsinki y la magia de Finlandia.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="Viajes-Islandia">
+                <div class="Viajes">
+                    <a href="islandia.html" class="viaje-item">
+                        <img alt="Impresionante paisaje volcánico con géiseres y glaciares en Islandia" class="gallery_img" src="../Imágenes/IMAGEN5.jpg" loading="lazy" decoding="async">
+                        <div class="info-pais">
+                            <h3>Viajes a Islandia</h3>
+                            <p>Vive la aventura en Islandia: géiseres, glaciares y paisajes volcánicos únicos.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="Viajes-Tour">
+                <div class="Viajes">
+                    <a href="tour-escandinavia.html" class="viaje-item">
+                        <img alt="Espectacular aurora boreal sobre paisaje nevado en Escandinavia" class="gallery_img" src="../Imágenes/auroraboreal.jpg" loading="lazy" decoding="async">
+                        <div class="info-pais">
+                            <h3>Tour Escandinavia Completo</h3>
+                            <p>Recorre los 5 países nórdicos en un viaje épico: Suecia, Dinamarca, Noruega, Finlandia e Islandia.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+    </section>
+
+    <!-- Sección de Estadísticas -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <h3 class="counter" data-target="2500">0</h3>
+                <p>Viajeros Felices</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-globe-europe"></i>
+                <h3 class="counter" data-target="5">0</h3>
+                <p>Países Nórdicos</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-star"></i>
+                <h3 class="counter" data-target="98">0</h3>
+                <p>% Satisfacción</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <h3 class="counter" data-target="15">0</h3>
+                <p>Años de Experiencia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Reseñas -->
+    <section id="reseñas" class="reseñas-section">
+        <div class="container-reseñas">
+            <h2>⭐ Lo que dicen nuestros viajeros</h2>
+            <div class="reseñas-grid">
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Una experiencia increíble en Suecia. El servicio de Nordika fue excepcional, nos ayudaron con todo desde el primer día. Estocolmo es una ciudad mágica."</p>
+                    <div class="autor-reseña">
+                        <strong>María González</strong>
+                        <span>Viajó a Suecia</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Los fiordos de Noruega son espectaculares. La organización del viaje fue perfecta y el guía muy profesional. ¡Definitivamente repetiremos!"</p>
+                    <div class="autor-reseña">
+                        <strong>Carlos Rodríguez</strong>
+                        <span>Viajó a Noruega</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Islandia es un país único y Nordika nos hizo vivir una aventura inolvidable. Los géiseres y la aurora boreal fueron impresionantes."</p>
+                    <div class="autor-reseña">
+                        <strong>Ana Martínez</strong>
+                        <span>Viajó a Islandia</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Dinamarca nos sorprendió gratamente. Copenhague es encantadora y el equipo de Nordika nos dio consejos excelentes para aprovechar al máximo el viaje."</p>
+                    <div class="autor-reseña">
+                        <strong>Roberto Silva</strong>
+                        <span>Viajó a Dinamarca</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Finlandia es un destino perfecto para relajarse. Los mil lagos y Helsinki nos enamoraron. El servicio de Nordika fue impecable."</p>
+                    <div class="autor-reseña">
+                        <strong>Laura Fernández</strong>
+                        <span>Viajó a Finlandia</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Un viaje de ensueño por los países nórdicos. Nordika organizó todo perfectamente y nos permitió conocer la cultura escandinava de manera auténtica."</p>
+                    <div class="autor-reseña">
+                        <strong>Miguel Torres</strong>
+                        <span>Tour Nórdico Completo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Inspiración Final -->
+    <section class="inspiracion-section">
+        <div class="inspiracion-overlay"></div>
+        <div class="inspiracion-content">
+            <h2>Tu Próxima Aventura Comienza en el Norte ❄️</h2>
+            <p>Deja que la magia de los países nórdicos transforme tu vida. Paisajes que quitan el aliento, culturas milenarias y experiencias que recordarás para siempre.</p>
+            <a href="#Destinos" class="btn-inspiracion">Descubrí Nordika Ahora</a>
+        </div>
+        <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">❄</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❄</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❄</div>
+            <div class="snowflake">❅</div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="redes">
+        <div class="container">
+            <!-- Sección de Suscripción -->
+            <div class="newsletter-section">
+                <h3>📧 ¡Recibí primero las mejores ofertas de viaje!</h3>
+                <p>Suscribite a nuestro newsletter y obtené descuentos exclusivos</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Ingresá tu email" required class="newsletter-input">
+                    <input type="text" placeholder="Ingresá tu nombre" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Suscribirme</button>
+                </form>
+            </div>
+
+            <h4>✉️ CONTÁCTANOS</h4>
+            <!-- Contacto Directo -->
+            <div class="redes" style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2rem;">
+                <span class="red-social" aria-label="WhatsApp" style="background: #25D366; border: none;">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </span>
+                <span class="red-social" aria-label="Gmail" style="background: #EA4335; border: none;">
+                    <i class="fas fa-envelope"></i> Gmail
+                </span>
+                <span class="red-social" aria-label="Teléfono" style="background: #203a57; border: none;">
+                    <i class="fas fa-phone"></i> Teléfono
+                </span>
+            </div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 30px;">
+                Síguenos en redes sociales
+            </p>
+            <div class="redes">
+                <span class="red-social" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i> Facebook
+                </span>
+                <span class="red-social" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </span>
+                <span class="red-social" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </span>
+                <span class="red-social" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </span>
+                <span class="red-social" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </span>
+            </div>
+
+            <!-- Métodos de Pago -->
+            <div class="payment-methods-section">
+                <h4 style="margin-bottom: 20px;">💳 MÚLTIPLES FORMAS DE PAGO</h4>
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" class="payment-logo">
+                    </div>
+                    <div class="payment-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="payment-logo">
+                    </div>
+                    <div class="payment-card">
+                        <svg class="payment-logo" viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="120" height="50" fill="#0052A3" rx="5"/>
+                            <text x="60" y="32" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">OCA</text>
+                        </svg>
+                    </div>
+                    <div class="payment-card">
+                        <svg class="payment-logo" viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="140" height="50" fill="#E30613" rx="5"/>
+                            <text x="70" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Red</text>
+                            <text x="70" y="38" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Pagos</text>
+                        </svg>
+                    </div>
+                    <div class="payment-card">
+                        <div class="bank-transfer-logo">
+                            <i class="fas fa-university"></i>
+                            <span>Transferencia Bancaria</span>
+                        </div>
+                    </div>
+                </div>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 15px;">
+                    Aceptamos todas las tarjetas y bancos principales
+                </p>
+            </div>
+
+            <p style="color: rgba(255,255,255,0.7); margin-top: 40px; font-size: 0.95rem;">
+                © 2025 Nordika - Agencia de Viajes Nórdicos. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante para volver arriba -->
+    <button class="scroll-to-top" aria-label="Volver arriba" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <!-- Script para menú responsive -->
+    <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.navbar-link, .navbar-btn').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.navbar-menu').classList.remove('active');
+            });
+        });
+
+        // Animaciones al hacer scroll - Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observar todas las secciones de viajes
+        document.querySelectorAll('.viaje-item, .reseña-card, .stat-item').forEach(el => {
+            el.classList.add('fade-in-element');
+            observer.observe(el);
+        });
+
+        // Contador animado
+        const counters = document.querySelectorAll('.counter');
+        let countingStarted = false;
+
+        const startCounting = () => {
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 3500;
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                        // Animación cuando llega al máximo
+                        counter.style.animation = 'counterComplete 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards';
+                        counter.parentElement.style.overflow = 'visible';
+                        
+                        // Después de 2 segundos, hacer fade out del efecto
+                        setTimeout(() => {
+                            counter.style.animation = 'counterFadeOut 1.5s ease-in-out forwards';
+                        }, 2000);
+                    }
+                };
+                updateCounter();
+            });
+        };
+
+        // Observar sección de estadísticas
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !countingStarted) {
+                        countingStarted = true;
+                        setTimeout(startCounting, 200);
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            statsObserver.observe(statsSection);
+        }
+
+        // ===== BARRA DE PROGRESO DE LECTURA =====
+        const progressBar = document.querySelector('.reading-progress-bar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (window.pageYOffset / windowHeight) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // ===== EFECTOS DE SCROLL =====
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrolled = window.pageYOffset;
+                    const heroSection = document.querySelector('.hero-section');
+                    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+                    
+                    // Parallax suave en hero (solo hasta el final del hero)
+                    if (heroSection) {
+                        const heroHeight = heroSection.offsetHeight;
+                        if (scrolled < heroHeight * 0.6) {
+                            const parallaxSpeed = scrolled * 0.2;  // Reducido de 0.3 a 0.2
+                        heroSection.style.transform = `translateY(${parallaxSpeed}px)`;
+                            const opacity = 1 - (scrolled / heroHeight) * 0.3;  // Reducido de 0.4 a 0.3
+                            heroSection.style.opacity = Math.max(opacity, 0.7);  // Aumentado de 0.6 a 0.7
+                        } else {
+                            // Resetear cuando sales del hero
+                            heroSection.style.transform = '';
+                            heroSection.style.opacity = '';
+                        }
+                    }
+                    
+                    // Botón volver arriba
+                    if (scrollToTopBtn) {
+                        if (window.pageYOffset > 300) {
+                            scrollToTopBtn.classList.add('visible');
+                        } else {
+                            scrollToTopBtn.classList.remove('visible');
+                        }
+                    }
+                    
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+    </script>
+
+    <!-- Script del Carrusel -->
+    <script>
+        let indiceSlide = 0;
+        let autoPlayInterval;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
+        function moverSlide(direccion) {
+            const slides = document.querySelectorAll('.slide');
+            const indicadores = document.querySelectorAll('.indicador');
+            
+            slides[indiceSlide].classList.remove('activo');
+            indicadores[indiceSlide].classList.remove('activo');
+            indicadores[indiceSlide].setAttribute('aria-selected', 'false');
+            
+            indiceSlide = (indiceSlide + direccion + slides.length) % slides.length;
+            
+            slides[indiceSlide].classList.add('activo');
+            indicadores[indiceSlide].classList.add('activo');
+            indicadores[indiceSlide].setAttribute('aria-selected', 'true');
+            
+            // Reiniciar el auto-play después de interacción manual
+            if (!prefersReducedMotion) {
+                reiniciarAutoPlay();
+            }
+        }
+
+        function irASlide(indice) {
+            const slides = document.querySelectorAll('.slide');
+            const indicadores = document.querySelectorAll('.indicador');
+            
+            slides[indiceSlide].classList.remove('activo');
+            indicadores[indiceSlide].classList.remove('activo');
+            indicadores[indiceSlide].setAttribute('aria-selected', 'false');
+            
+            indiceSlide = indice;
+            
+            slides[indiceSlide].classList.add('activo');
+            indicadores[indiceSlide].classList.add('activo');
+            indicadores[indiceSlide].setAttribute('aria-selected', 'true');
+            
+            // Reiniciar el auto-play después de interacción manual
+            if (!prefersReducedMotion) {
+                reiniciarAutoPlay();
+            }
+        }
+
+        // Auto-play: avanza automáticamente cada 5 segundos
+        function iniciarAutoPlay() {
+            if (prefersReducedMotion) return; // No auto-play si el usuario prefiere menos movimiento
+            
+            autoPlayInterval = setInterval(() => {
+                moverSlide(1);
+            }, 5000);
+        }
+
+        function detenerAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        function reiniciarAutoPlay() {
+            detenerAutoPlay();
+            iniciarAutoPlay();
+        }
+
+        // Event listeners para flechas
+        const flechaIzq = document.querySelector('.flecha-izquierda');
+        const flechaDer = document.querySelector('.flecha-derecha');
+        
+        if (flechaIzq) flechaIzq.addEventListener('click', () => moverSlide(-1));
+        if (flechaDer) flechaDer.addEventListener('click', () => moverSlide(1));
+        
+        // Event listeners para indicadores
+        const indicadores = document.querySelectorAll('.indicador');
+        indicadores.forEach((indicador, index) => {
+            indicador.addEventListener('click', () => irASlide(index));
+        });
+        
+        // Soporte de teclado para accesibilidad
+        document.addEventListener('keydown', (e) => {
+            if (e.target.closest('.carrusel')) {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    moverSlide(-1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    moverSlide(1);
+                }
+            }
+        });
+
+        // Iniciar auto-play cuando carga la página
+        iniciarAutoPlay();
+
+        // Pausar auto-play cuando el usuario pasa el mouse sobre el carrusel
+        const carrusel = document.querySelector('.carrusel');
+        if (carrusel) {
+            carrusel.addEventListener('mouseenter', detenerAutoPlay);
+            carrusel.addEventListener('mouseleave', () => {
+                if (!prefersReducedMotion) iniciarAutoPlay();
+            });
+        }
+    </script>
+
+    <!-- Script para Newsletter -->
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            const nombre = this.querySelector('input[type="text"]').value;
+            
+            // Aquí puedes agregar la lógica para enviar los datos a tu backend
+            alert(`¡Gracias ${nombre}! Te has suscrito exitosamente con el email: ${email}\n\n¡Pronto recibirás nuestras mejores ofertas! 🎉`);
+            
+            // Limpiar el formulario
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
