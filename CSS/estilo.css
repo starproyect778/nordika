@@ -303,9 +303,10 @@ img {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
+/* Animación del logo desactivada para evitar que el avión gire constantemente */
 .navbar-logo i {
     display: inline-block;
-    animation: rotateSnowflake 20s linear infinite;
+    /* animation: rotateSnowflake 20s linear infinite; */
 }
 
 @keyframes rotateSnowflake {
@@ -318,7 +319,7 @@ img {
 }
 
 .navbar-logo:hover i {
-    animation: rotateSnowflake 2s linear infinite;
+    /* animation: rotateSnowflake 2s linear infinite; */
 }
 
 /* Logo icono de viaje */
